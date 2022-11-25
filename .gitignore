@@ -1,12 +1,3 @@
 # Dependencies
 /node_modules
-/.parcel-cache
-/.vscode
 
-# Production
-/build
-/dist
-
-# ignore all js file
-*.js
-*.css

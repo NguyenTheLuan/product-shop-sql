@@ -63,10 +63,20 @@ const totalPrice = getProduct.reduce((a, b) => {
   return a + b.Cost * b.quantity;
 }, 0);
 
+const paymentSection = `<div class="price">
+<div class="root-price">Price: ${totalPrice.toLocaleString()}</div>
+<div class="tax">Tax (+8%): ${(totalPrice * 0.08).toLocaleString()}</div>
+<div class="shipping-fee">Total Price: ${(19.99).toLocaleString()}</div>
+<div class="divider"></div>
+<div class="total-price">Total Price: ${(
+  totalPrice +
+  totalPrice * 0.08 +
+  19.99
+).toLocaleString()}</div>
+</div>`;
+
 // console.log("totalPrice", totalPrice);
-$productCart.append(
-  `<div class="total-price">Total Price: ${totalPrice}</div>`
-);
+$productCart.append(paymentSection);
 
 //delete cart
 const deleteItemBtns = document.querySelectorAll(".btn-delete");

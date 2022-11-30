@@ -44,7 +44,6 @@ button {
   height: 120px;
 }
 
-.total-price,
 .pay-roll {
   text-align: right;
   color: red;
@@ -78,4 +77,28 @@ button.checkout {
 }
 button.cancel {
   background: rgb(255, 215, 215);
+}
+
+/* price here */
+.price {
+  padding-right: 20px;
+
+  font-size: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  gap: 8px;
+}
+.root-price,
+.tax,
+.shipping-fee {
+  color: black;
+}
+.divider {
+  margin: 20px 0 10px 0;
+  background: rgb(96, 55, 55);
+  height: 4px;
+  width: 500px;
 }
